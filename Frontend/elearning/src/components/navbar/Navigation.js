@@ -32,16 +32,15 @@ function Navigation() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        variant={scroll ? 'dark' : 'light'}
-        bg={scroll ? 'dark' : 'transparent'}
+        bg={scroll ? 'light' : 'transparent'}
         style={{ transition: 'background-color 0.5s, color 0.5s' }}
       >
         <Container>
           <Navbar.Brand href="/"><img src={logo} alt='logo' style={{width:'250px', height:'50px'}}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto" style={{marginLeft:'100px'}}>
-              <Nav.Link href="/">Home</Nav.Link>
+            <Nav  style={{marginLeft:'100px',fontSize:'15px',fontWeight:'500'}}>
+              <Nav.Link style={{color:'#FF6575'}} href="/">Home</Nav.Link>
               <Nav.Link href="/about">About Us</Nav.Link>
               <Nav.Link href="/contact">Contact Us</Nav.Link>
               <NavDropdown title="Courses" id="collasible-nav-dropdown"style={{marginRight:'50px'}}>
@@ -58,8 +57,8 @@ function Navigation() {
             </Nav>
 
             {/* login and register button */}
-            <Nav>
-            <Link to='/login'><Button className='button' variant="outline-success" style={{marginRight:'30px'}}>Login</Button></Link>
+            <Nav style={{marginLeft:'120px'}}>
+            <Link to='/login'><Button className='button' variant="outline-success" style={{marginRight:'0px'}}>Login</Button></Link>
             <Link to='/register'><Button className='button' variant="outline-success">Sign In</Button></Link>
             </Nav>
           </Navbar.Collapse>
